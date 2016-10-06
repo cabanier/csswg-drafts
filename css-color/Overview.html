@@ -280,7 +280,7 @@ table.named-color-table td:nth-child(n+4) { background: silver; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="http://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1>CSS Color Module Level 4</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2016-10-05">5 October 2016</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2016-10-06">6 October 2016</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -384,7 +384,7 @@ on screen, on paper, in speech, etc.
      <ol class="toc">
       <li><a href="#color-function"><span class="secno">10.1</span> <span class="content">Specifying profiled colors: the <span class="css">color()</span> function</span></a>
       <li>
-       <a href="#predefined"><span class="secno">10.2</span> <span class="content"> Predefined colorspaces: <span class="css">srgb</span>, <span class="css">display-p3</span>, and <span class="css">rec2020</span>.</span></a>
+       <a href="#predefined"><span class="secno">10.2</span> <span class="content"> Predefined colorspaces: <span class="css">srgb</span>, <span class="css">image-p3</span>, and <span class="css">rec2020</span>.</span></a>
        <ol class="toc">
         <li><a href="#predefined-to-lab"><span class="secno">10.2.1</span> <span class="content"> Converting predefined colorspaces to Lab</span></a>
         <li><a href="#lab-to-predefined"><span class="secno">10.2.2</span> <span class="content"> Converting Lab to predefined colorspaces</span></a>
@@ -3642,7 +3642,7 @@ hsl(120deg 75% 85%)  <span style="color:black; background:hsl(120,75%,85%);">pas
 	or an RGB colorspace (such as ProPhoto ,  widely used by photographers), or any other color or monochrome output device which has been characterized.
 	In addition, for convenience,
 	CSS provides two predefined RGB color spaces:
-	display-p3 <a data-link-type="biblio" href="#biblio-dci-p3">[DCI-P3]</a>,
+	image-p3 <a data-link-type="biblio" href="#biblio-dci-p3">[DCI-P3]</a>,
 	which is a wide gamut space typical of current wide-gamut monitors,
 	and Rec. 2020 [<a data-link-type="biblio" href="#biblio-rec2020">[Rec.2020]</a>,
 	which is a ultra-wide gamut space capable of representing almost all visible real-world colors.
@@ -3685,7 +3685,7 @@ profile prophoto {
     <li data-md="">
      <p>An optional <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-values-4/#typedef-ident">&lt;ident></a> denoting the colorspace.
 This can be one of the predefined colorspaces
-(such as <a class="css" data-link-type="maybe" href="#valdef-color-display-p3" id="ref-for-valdef-color-display-p3-1">display-p3</a>),
+(such as <a class="css" data-link-type="maybe" href="#valdef-color-image-p3" id="ref-for-valdef-color-image-p3-1">image-p3</a>),
 or one defined by a <a class="css" data-link-type="maybe" href="#at-ruledef-profile" id="ref-for-at-ruledef-profile-2">@color-profile</a> rule.
 If omitted, it defaults to the predefined <a class="css" data-link-type="maybe" href="#valdef-color-srgb" id="ref-for-valdef-color-srgb-1">srgb</a> color profile.</p>
      <p>If the <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-values-4/#typedef-ident">&lt;ident></a> names a non-existent colorspace,
@@ -3724,7 +3724,7 @@ and if omitted it defaults to <span class="css">100%</span>.</p>
 	specified by the first of its arguments that represent a <dfn data-dfn-type="dfn" data-export="" id="valid-color">valid color<a class="self-link" href="#valid-color"></a></dfn> (that is, the first argument that isn’t an <dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="invalid-color">invalid color</dfn>).
 	If all of its arguments represent <a data-link-type="dfn" href="#invalid-color" id="ref-for-invalid-color-4">invalid colors</a>, <a class="css" data-link-type="maybe" href="#funcdef-color" id="ref-for-funcdef-color-4">color()</a> represents a fully opaque black,
 	identical to <span class="css">rgb(0 0 0)</span>.</p>
-   <h3 class="heading settled" data-level="10.2" id="predefined"><span class="secno">10.2. </span><span class="content"> Predefined colorspaces: <a class="css" data-link-type="maybe" href="#valdef-color-srgb" id="ref-for-valdef-color-srgb-2">srgb</a>, <a class="css" data-link-type="maybe" href="#valdef-color-display-p3" id="ref-for-valdef-color-display-p3-2">display-p3</a>, and <a class="css" data-link-type="maybe" href="#valdef-color-rec2020" id="ref-for-valdef-color-rec2020-1">rec2020</a>.</span><a class="self-link" href="#predefined"></a></h3>
+   <h3 class="heading settled" data-level="10.2" id="predefined"><span class="secno">10.2. </span><span class="content"> Predefined colorspaces: <a class="css" data-link-type="maybe" href="#valdef-color-srgb" id="ref-for-valdef-color-srgb-2">srgb</a>, <a class="css" data-link-type="maybe" href="#valdef-color-image-p3" id="ref-for-valdef-color-image-p3-2">image-p3</a>, and <a class="css" data-link-type="maybe" href="#valdef-color-rec2020" id="ref-for-valdef-color-rec2020-1">rec2020</a>.</span><a class="self-link" href="#predefined"></a></h3>
    <p>The following colorspaces are predefined for use in the <a class="css" data-link-type="maybe" href="#funcdef-color" id="ref-for-funcdef-color-5">color()</a> function.
 	They can be used without any <a class="css" data-link-type="maybe" href="#at-ruledef-profile" id="ref-for-at-ruledef-profile-3">@color-profile</a> rule.</p>
    <p class="issue" id="issue-2f987e9e"><a class="self-link" href="#issue-2f987e9e"></a> Decided at San Francisco to add a larger set of common predefined spaces
@@ -3772,9 +3772,9 @@ and if omitted it defaults to <span class="css">100%</span>.</p>
   Cl <span class="o">=</span> Math<span class="p">.</span>pow<span class="p">(</span><span class="p">(</span>C <span class="o">+</span> <span class="mf">0.055</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1.055</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">)</span><span class="p">;</span>
 </pre>
      <p>C is the red, green or blue component.</p>
-    <dt><dfn class="dfn-paneled css" data-dfn-for="color()" data-dfn-type="value" data-export="" id="valdef-color-display-p3">display-p3</dfn> 
+    <dt><dfn class="dfn-paneled css" data-dfn-for="color()" data-dfn-type="value" data-export="" id="valdef-color-image-p3">image-p3</dfn> 
     <dd>
-      The <a class="css" data-link-type="maybe" href="#valdef-color-display-p3" id="ref-for-valdef-color-display-p3-3">display-p3</a> <a data-link-type="biblio" href="#biblio-dci-p3">[DCI-P3]</a> colorspace accepts three numeric parameters,
+      The <a class="css" data-link-type="maybe" href="#valdef-color-image-p3" id="ref-for-valdef-color-image-p3-3">image-p3</a> <a data-link-type="biblio" href="#biblio-dci-p3">[DCI-P3]</a> colorspace accepts three numeric parameters,
 			representing the red, green, and blue channels of the color,
 			with each having a valid range of [0, 1]. 
      <p>It has the following characteristics:</p>
@@ -3839,13 +3839,13 @@ and if omitted it defaults to <span class="css">100%</span>.</p>
    <ol>
     <li>Convert from gamma-corrected RGB to linear-light RGB (undo gamma encoding) 
     <li>Convert from linear RGB to CIE XYZ 
-    <li>Convert from a D65 whitepoint (used by both display-p3 and rec2020) to the D50 whitepoint used in Lab,
+    <li>Convert from a D65 whitepoint (used by both image-p3 and rec2020) to the D50 whitepoint used in Lab,
 			with the Bradford transform 
     <li>Convert D50-adapted XYZ to Lab 
    </ol>
    <p class="issue" id="issue-7212ca6b"><a class="self-link" href="#issue-7212ca6b"></a> Canvas proposes adding a 16bit half-float <em>linear</em> rec2020 space</p>
    <h4 class="heading settled" data-level="10.2.2" id="lab-to-predefined"><span class="secno">10.2.2. </span><span class="content"> Converting Lab to predefined colorspaces</span><a class="self-link" href="#lab-to-predefined"></a></h4>
-   <p>Conversion from Lab to display-p3 or rec2020 also requires multiple steps,
+   <p>Conversion from Lab to image-p3 or rec2020 also requires multiple steps,
 	and again in practice all but the last step are linear calculations and can be combined.</p>
    <ol>
     <li>Convert Lab to (D50-adapted) XYZ 
@@ -3865,7 +3865,7 @@ and if omitted it defaults to <span class="css">100%</span>.</p>
 </pre>
    <p>The <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-values-4/#identifier-value">&lt;custom-ident></a> gives the <a data-link-type="dfn" href="#css-color-profile" id="ref-for-css-color-profile-1">color profile’s</a> name.
 	All of the predefined colorspace keywords
-	(<a class="css" data-link-type="maybe" href="#valdef-color-srgb" id="ref-for-valdef-color-srgb-4">srgb</a>, <a class="css" data-link-type="maybe" href="#valdef-color-display-p3" id="ref-for-valdef-color-display-p3-4">display-p3</a>, <a class="css" data-link-type="maybe" href="#valdef-color-rec2020" id="ref-for-valdef-color-rec2020-3">rec2020</a>)
+	(<a class="css" data-link-type="maybe" href="#valdef-color-srgb" id="ref-for-valdef-color-srgb-4">srgb</a>, <a class="css" data-link-type="maybe" href="#valdef-color-image-p3" id="ref-for-valdef-color-image-p3-4">image-p3</a>, <a class="css" data-link-type="maybe" href="#valdef-color-rec2020" id="ref-for-valdef-color-rec2020-3">rec2020</a>)
 	are excluded from this <a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-values-4/#identifier-value">&lt;custom-ident></a>,
 	as they’re predefined by this specification and always available.</p>
    <p>The <a class="css" data-link-type="maybe" href="#at-ruledef-profile" id="ref-for-at-ruledef-profile-4">@color-profile</a> rule accepts the descriptors defined in this specification.</p>
@@ -4654,11 +4654,11 @@ Check with definitions in CSS compositing and blending module. </p>
   <span class="k">return</span> math<span class="p">.</span>multiply<span class="p">(</span>M<span class="p">,</span> XYZ<span class="p">)</span><span class="p">.</span>valueOf<span class="p">(</span><span class="p">)</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// display-p3-related functions
+<span class="c1">// image-p3-related functions
 </span>
 
 <span class="kd">function</span> lin_P3<span class="p">(</span>RGB<span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// convert an array of display-p3 RGB values in the range 0.0 - 1.0
+  <span class="c1">// convert an array of image-p3 RGB values in the range 0.0 - 1.0
 </span>  <span class="c1">// to linear light (un-companded) form.
 </span>
   <span class="k">return</span> RGB<span class="p">.</span>map<span class="p">(</span><span class="kd">function</span> <span class="p">(</span>val<span class="p">)</span> <span class="p">{</span>
@@ -5134,7 +5134,6 @@ this risk should be eliminated.</p>
    <li><a href="#funcdef-device-cmyk">device-cmyk()</a><span>, in §12</span>
    <li><a href="#valdef-color-dimgray">dimgray</a><span>, in §5</span>
    <li><a href="#valdef-color-dimgrey">dimgrey</a><span>, in §5</span>
-   <li><a href="#valdef-color-display-p3">display-p3</a><span>, in §10.2</span>
    <li><a href="#valdef-color-dodgerblue">dodgerblue</a><span>, in §5</span>
    <li><a href="#valdef-color-adjust-economy">economy</a><span>, in §15</span>
    <li><a href="#valdef-color-adjust-exact">exact</a><span>, in §15</span>
@@ -5163,6 +5162,7 @@ this risk should be eliminated.</p>
    <li><a href="#typedef-hue">&lt;hue></a><span>, in §6</span>
    <li><a href="#hue-angle-is-null">hue angle is null</a><span>, in §13</span>
    <li><a href="#funcdef-hwb">hwb()</a><span>, in §7</span>
+   <li><a href="#valdef-color-image-p3">image-p3</a><span>, in §10.2</span>
    <li><a href="#inactiveborder">InactiveBorder</a><span>, in §Unnumbered section</span>
    <li><a href="#inactivecaption">InactiveCaption</a><span>, in §Unnumbered section</span>
    <li><a href="#inactivecaptiontext">InactiveCaptionText</a><span>, in §Unnumbered section</span>
@@ -5583,7 +5583,7 @@ HSL Colors: hsl() and hsla() functions</a>
 Specifying Lab and LCH: the lab() and lch() functional notations</a> <a href="#ref-for-funcdef-rgb-10">(2)</a>
     <li><a href="#ref-for-funcdef-rgb-11">10.1. Specifying profiled colors: the color() function</a>
     <li><a href="#ref-for-funcdef-rgb-12">10.2. 
-Predefined colorspaces: srgb, display-p3, and rec2020.</a>
+Predefined colorspaces: srgb, image-p3, and rec2020.</a>
     <li><a href="#ref-for-funcdef-rgb-13"> Changes from Colors 3</a> <a href="#ref-for-funcdef-rgb-14">(2)</a> <a href="#ref-for-funcdef-rgb-15">(3)</a>
    </ul>
   </aside>
@@ -5808,7 +5808,7 @@ Specifying Grays: the gray() functional notation</a> <a href="#ref-for-funcdef-g
    <ul>
     <li><a href="#ref-for-funcdef-color-1">10.1. Specifying profiled colors: the color() function</a> <a href="#ref-for-funcdef-color-2">(2)</a> <a href="#ref-for-funcdef-color-3">(3)</a> <a href="#ref-for-funcdef-color-4">(4)</a>
     <li><a href="#ref-for-funcdef-color-5">10.2. 
-Predefined colorspaces: srgb, display-p3, and rec2020.</a>
+Predefined colorspaces: srgb, image-p3, and rec2020.</a>
     <li><a href="#ref-for-funcdef-color-6">10.3. 
 Specifying a color profile: the color-profile at-rule</a>
     <li><a href="#ref-for-funcdef-color-7"> Changes from Colors 3</a>
@@ -5825,18 +5825,18 @@ Specifying a color profile: the color-profile at-rule</a>
    <ul>
     <li><a href="#ref-for-valdef-color-srgb-1">10.1. Specifying profiled colors: the color() function</a>
     <li><a href="#ref-for-valdef-color-srgb-2">10.2. 
-Predefined colorspaces: srgb, display-p3, and rec2020.</a> <a href="#ref-for-valdef-color-srgb-3">(2)</a>
+Predefined colorspaces: srgb, image-p3, and rec2020.</a> <a href="#ref-for-valdef-color-srgb-3">(2)</a>
     <li><a href="#ref-for-valdef-color-srgb-4">10.3. 
 Specifying a color profile: the color-profile at-rule</a>
    </ul>
   </aside>
-  <aside class="dfn-panel" data-for="valdef-color-display-p3">
-   <b><a href="#valdef-color-display-p3">#valdef-color-display-p3</a></b><b>Referenced in:</b>
+  <aside class="dfn-panel" data-for="valdef-color-image-p3">
+   <b><a href="#valdef-color-image-p3">#valdef-color-image-p3</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-valdef-color-display-p3-1">10.1. Specifying profiled colors: the color() function</a>
-    <li><a href="#ref-for-valdef-color-display-p3-2">10.2. 
-Predefined colorspaces: srgb, display-p3, and rec2020.</a> <a href="#ref-for-valdef-color-display-p3-3">(2)</a>
-    <li><a href="#ref-for-valdef-color-display-p3-4">10.3. 
+    <li><a href="#ref-for-valdef-color-image-p3-1">10.1. Specifying profiled colors: the color() function</a>
+    <li><a href="#ref-for-valdef-color-image-p3-2">10.2. 
+Predefined colorspaces: srgb, image-p3, and rec2020.</a> <a href="#ref-for-valdef-color-image-p3-3">(2)</a>
+    <li><a href="#ref-for-valdef-color-image-p3-4">10.3. 
 Specifying a color profile: the color-profile at-rule</a>
    </ul>
   </aside>
@@ -5844,7 +5844,7 @@ Specifying a color profile: the color-profile at-rule</a>
    <b><a href="#valdef-color-rec2020">#valdef-color-rec2020</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-valdef-color-rec2020-1">10.2. 
-Predefined colorspaces: srgb, display-p3, and rec2020.</a> <a href="#ref-for-valdef-color-rec2020-2">(2)</a>
+Predefined colorspaces: srgb, image-p3, and rec2020.</a> <a href="#ref-for-valdef-color-rec2020-2">(2)</a>
     <li><a href="#ref-for-valdef-color-rec2020-3">10.3. 
 Specifying a color profile: the color-profile at-rule</a>
    </ul>
@@ -5856,7 +5856,7 @@ Specifying a color profile: the color-profile at-rule</a>
 Profiled, Device-dependent Colors</a>
     <li><a href="#ref-for-at-ruledef-profile-2">10.1. Specifying profiled colors: the color() function</a>
     <li><a href="#ref-for-at-ruledef-profile-3">10.2. 
-Predefined colorspaces: srgb, display-p3, and rec2020.</a>
+Predefined colorspaces: srgb, image-p3, and rec2020.</a>
     <li><a href="#ref-for-at-ruledef-profile-4">10.3. 
 Specifying a color profile: the color-profile at-rule</a> <a href="#ref-for-at-ruledef-profile-5">(2)</a> <a href="#ref-for-at-ruledef-profile-6">(3)</a>
     <li><a href="#ref-for-at-ruledef-profile-7"> Changes from Colors 3</a>
